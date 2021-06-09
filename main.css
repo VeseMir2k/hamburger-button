@@ -10,8 +10,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 264px;
-  height: 264px;
+  width: 80px;
+  height: 80px;
   overflow: hidden;
 }
 
@@ -20,6 +20,16 @@
   width: 100%;
   height: 20%;
   background-color: black;
+}
+
+.button > span:first-child {
+  transform-origin: 5% 100%;
+  transition: 0.1s linear;
+}
+
+.button:hover > span:first-child {
+  transform: rotate(45deg);
+  width: 116%;
 }
 
 .button > span:nth-child(2) {
@@ -31,9 +41,29 @@
 .button > span:nth-child(2) span:first-child {
   background-color: black;
   flex-basis: 50%;
+  transition: 0.1s linear;
+}
+
+.button:hover > span:nth-child(2) span:first-child {
+  transform: translate(100%, 0);
 }
 
 .button > span:nth-child(2) span:last-child {
   background-color: black;
   flex-basis: 50%;
+  transition: 0.1s linear;
+}
+
+.button:hover > span:nth-child(2) span:last-child {
+  transform: translate(-100%, 0);
+}
+
+.button > span:last-child {
+  transform-origin: 5% 0;
+  transition: 0.1s linear;
+}
+
+.button:hover > span:last-child {
+  transform: rotate(-45deg);
+  width: 116%;
 }
